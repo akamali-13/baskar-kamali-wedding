@@ -33,3 +33,4 @@ Cloudflare Pages is another free static-hosting option. No RSVP backend is neede
 - Music does not autoplay. Visitors choose to play it, which works better with mobile browser restrictions.
 - The travel buttons open Google Maps directions from Chennai, Bengaluru and Puducherry to the named venue search. Verify the exact venue pin before sharing.
 - The reception and event timings are intentionally marked as pending until confirmed.
+- 
