@@ -62,6 +62,6 @@ if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "Intersecti
 if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
  const symbols=["✿","❀","·"];
  function makePetal(){const p=document.createElement("span");p.className="petal";p.textContent=symbols[Math.floor(Math.random()*symbols.length)];p.style.left=Math.random()*100+"vw";p.style.fontSize=(9+Math.random()*10)+"px";p.style.setProperty("--drift",(Math.random()*150-75)+"px");p.style.animationDuration=(9+Math.random()*7)+"s";document.body.appendChild(p);setTimeout(()=>p.remove(),17000);}
- for(let i=0;i<6;i++)setTimeout(makePetal,i*500);setInterval(makePetal,1900);
+ for(let i=0;i<10;i++)setTimeout(makePetal,i*280);setInterval(makePetal,1050);
 }
 
