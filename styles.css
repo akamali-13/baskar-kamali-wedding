@@ -213,3 +213,111 @@ footer{background:#e9e5d8;color:#6d6857}
 .celebration .section-heading h2{color:#fff4e4!important}
 .celebration .section-heading .section-kicker{color:#e1c58f!important}
 .celebration .section-heading>p:last-child{color:#f0e4d0!important}
+
+
+/* Refined editorial botanical hero — Baskar & Kamali */
+.hero{
+  min-height: min(900px, calc(100svh - 76px));
+  padding: clamp(70px,9vh,112px) 24px 205px;
+  background:
+    radial-gradient(ellipse at 50% 38%,#fffdf6 0%,#f8f2e6 43%,#e9e4d2 100%);
+  isolation:isolate;
+}
+.hero:before,.hero:after{
+  width:clamp(280px,42vw,560px);height:clamp(280px,42vw,560px);
+  border:1px solid #a98b5b35;top:-310px;left:-230px;
+  box-shadow:0 0 0 12px #a98b5b0c,0 0 0 28px #a98b5b0a;
+}
+.hero:after{top:auto;left:auto;bottom:-340px;right:-250px}
+.hero-pattern{
+  inset:18px;border:1px solid #a58a5c99;
+  box-shadow:inset 0 0 0 5px #fff9, inset 0 0 0 7px #a58a5c22,
+             inset 0 0 80px #8b79501a;
+}
+.hero-pattern:before,.hero-pattern:after{
+  content:"";position:absolute;width:34px;height:34px;border-color:#a58a5c;
+  border-style:solid;opacity:.8;
+}
+.hero-pattern:before{top:12px;left:12px;border-width:1px 0 0 1px}
+.hero-pattern:after{right:12px;bottom:12px;border-width:0 1px 1px 0}
+.hero-content{max-width:850px;padding:20px 24px;z-index:2}
+.hero .eyebrow{font-size:9px;letter-spacing:3.6px;color:#777653}
+.hero-emblem{
+  display:flex;align-items:center;justify-content:center;gap:13px;
+  margin:30px auto 15px;color:#8b8057;
+}
+.emblem-line{width:clamp(24px,6vw,66px);height:1px;background:linear-gradient(90deg,transparent,#ad9565)}
+.emblem-line:last-child{background:linear-gradient(90deg,#ad9565,transparent)}
+.emblem-flower{font-size:14px;color:#b27a78}
+.emblem-monogram{
+  width:54px;height:54px;border:1px solid #ad9565;border-radius:50%;
+  display:grid;place-items:center;font:500 18px "Cormorant Garamond",serif;
+  color:#592632;position:relative;background:#fffaf0a8;
+  box-shadow:0 0 0 4px #f8f2e6,0 0 0 5px #ad956566;
+}
+.emblem-monogram i{font-size:12px;color:#a88751;font-weight:400}
+.hero h1{
+  flex-direction:row;gap:clamp(10px,2.5vw,27px);
+  font-size:clamp(64px,10vw,116px);line-height:.92;letter-spacing:-1.8px;
+  color:#51232e;text-shadow:0 2px 0 #fff9;
+  margin:22px 0 20px;
+}
+.hero h1 i{font-size:.42em;color:#a48655;font-style:italic;font-weight:400}
+.hero-subtitle{
+  max-width:520px;margin:0 auto;font-size:clamp(21px,3vw,27px);
+  line-height:1.2;color:#70544a;
+}
+.hero-rule{margin:29px auto 13px;gap:13px}
+.hero-rule span{width:48px;background:#a58b5e}
+.hero-rule b{font-size:12px;color:#a58b5e}
+.date-line{
+  margin:0 0 18px;font-size:clamp(28px,4vw,38px);
+  letter-spacing:5px;color:#672d39;
+}
+.countdown{
+  max-width:490px;margin:24px auto 0;padding:15px 24px 17px;
+  border:1px solid #b6a27680;border-radius:2px;background:#fffdf6a8;
+  box-shadow:0 12px 32px #5c49300d;
+}
+.countdown-title{font-size:8px;letter-spacing:3px;color:#777653}
+.countdown-unit strong{font-size:clamp(27px,4vw,36px);color:#572632}
+.countdown-unit span{font-size:7px;letter-spacing:1.8px;color:#777653}
+.venue-line{margin-top:24px;font-size:9px;letter-spacing:2.2px;color:#72694f}
+.text-link{margin-top:22px;color:#6f6748;border-color:#a58b5e;font-size:10px}
+.heritage-motifs{z-index:1}
+.heritage-motifs svg{filter:drop-shadow(0 7px 9px #51452a12)}
+.motif-peacock{
+  width:clamp(130px,19vw,230px);left:2.5%;right:auto;top:auto;bottom:5%;
+  color:#557365;opacity:.72;animation:featherSway 7s ease-in-out infinite;
+}
+.motif-swan{
+  width:clamp(155px,22vw,270px);right:2%;left:auto;bottom:5%;
+  color:#9b896c;opacity:.74!important;animation:swanGlide 9s ease-in-out infinite;
+}
+.motif-lotus{
+  width:clamp(110px,15vw,180px);left:calc(50% - 90px);right:auto;bottom:1%;
+  color:#b27a78;opacity:.72;animation:lotusBreath 5s ease-in-out infinite;
+}
+.corner{display:none}
+@media(max-width:800px){
+  .hero{min-height:790px;padding:66px 15px 185px}
+  .hero-pattern{inset:10px}
+  .hero-content{padding:16px 8px}
+  .hero .eyebrow{font-size:8px;letter-spacing:2.5px}
+  .hero-emblem{margin:26px auto 16px}
+  .hero h1{flex-direction:column;gap:0;font-size:clamp(66px,17vw,88px);line-height:.78;margin:26px 0 23px}
+  .hero h1 i{font-size:30px;line-height:1.45}
+  .hero-subtitle{max-width:310px;font-size:22px}
+  .countdown{max-width:340px;padding:14px 12px}
+  .countdown-title{font-size:7px;letter-spacing:2px}
+  .motif-peacock{width:112px;left:-10px;bottom:3%;opacity:.55}
+  .motif-swan{width:142px;right:-12px;bottom:3%;opacity:.58!important}
+  .motif-lotus{width:84px;left:calc(50% - 42px);bottom:0;opacity:.58}
+  .venue-line{max-width:290px;margin:20px auto 0;line-height:1.8;font-size:8px}
+  .text-link{margin-top:17px}
+}
+@media(max-width:380px){
+  .hero{min-height:760px;padding-bottom:170px}
+  .hero h1{font-size:65px}
+  .countdown{max-width:310px}
+}
