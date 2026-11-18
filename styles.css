@@ -24,27 +24,3 @@
 @media(max-width:800px){.countdown{max-width:340px;padding:14px 10px}.countdown-title{font-size:8px;letter-spacing:2px}.countdown-unit span{font-size:7px;letter-spacing:1px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.js-motion [data-reveal]{opacity:1;transform:none}.petal{display:none}}
 
-/* Full-screen traditional invitation reveal */
-.invitation-screen{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:22px;background:radial-gradient(ellipse at center,#762c39 0%,#501521 62%,#351019 100%);transition:opacity .85s ease,visibility .85s ease}
-.invitation-screen::before,.invitation-screen::after{content:"";position:absolute;inset:12px;border:1px solid rgba(218,184,124,.45);pointer-events:none}
-.invitation-screen::after{inset:19px;border:1px solid rgba(218,184,124,.2)}
-.invitation-frame{position:relative;width:min(100%,520px);min-height:min(720px,calc(100dvh - 76px));padding:clamp(42px,8vh,76px) 24px 48px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#f9edda;border:1px solid rgba(222,190,137,.65);outline:1px solid rgba(222,190,137,.2);outline-offset:7px;background:linear-gradient(145deg,rgba(255,255,255,.035),transparent 55%);box-shadow:0 25px 90px #17070b66}
-.invite-ornament{position:absolute;left:0;right:0;color:#d8b77f;font:30px 'Cormorant Garamond',serif;letter-spacing:8px;opacity:.9}
-.invite-top{top:22px}.invite-bottom{bottom:17px;transform:rotate(180deg)}
-.invite-kicker{font-size:9px;letter-spacing:2.7px;color:#e1c99f;margin:0 0 19px}
-.invite-lotus{font-size:36px;color:#e0bd7e;line-height:1;margin-bottom:18px;animation:inviteBloom 2.2s ease-in-out infinite alternate}
-.invite-intro{font:italic 17px 'Cormorant Garamond',serif;color:#e8d6b8;margin:0 0 10px}
-.invite-names{display:flex;flex-direction:column;align-items:center;gap:0;margin:0;font:500 clamp(42px,10vw,62px)/.92 'Cormorant Garamond',serif;color:#fff5e7}
-.invite-names i{font:italic 26px 'Cormorant Garamond',serif;color:#d9b779;padding:9px 0}
-.invite-message{max-width:290px;font:italic 17px/1.5 'Cormorant Garamond',serif;color:#ead9bd;margin:20px auto}
-.invite-divider{display:flex;align-items:center;gap:13px;color:#d8b77f;margin:3px 0 13px}.invite-divider span{width:45px;height:1px;background:#d8b77f88}
-.invite-date{font:500 21px 'Cormorant Garamond',serif;letter-spacing:3px;color:#fff0d6;margin:0 0 12px}
-.invite-venue{font:600 8px/1.8 Manrope,sans-serif;letter-spacing:1.7px;color:#ddc69f;margin:0 0 25px}
-.open-invitation{display:inline-flex;align-items:center;gap:14px;padding:13px 24px;border:1px solid #d8b77f;background:#d8b77f;color:#4b1721;font:600 11px Manrope,sans-serif;letter-spacing:1.2px;cursor:pointer;transition:background .25s ease,transform .25s ease,box-shadow .25s ease}
-.open-invitation:hover{background:#f0d8a9;transform:translateY(-2px);box-shadow:0 8px 25px #1a070b44}
-.open-invitation b{font-size:15px}
-.invitation-screen.is-opening{opacity:0;visibility:hidden;pointer-events:none}
-body.invitation-locked{overflow:hidden}
-@keyframes inviteBloom{from{transform:scale(.94);opacity:.72}to{transform:scale(1.08);opacity:1}}
-@media(max-height:650px){.invitation-frame{min-height:0;padding:38px 20px}.invite-lotus{margin-bottom:9px}.invite-message{margin:12px auto}.invite-venue{margin-bottom:14px}}
-@media(prefers-reduced-motion:reduce){.invitation-screen,.invite-lotus,.open-invitation{transition:none;animation:none}}
