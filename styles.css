@@ -67,3 +67,31 @@ body{background:var(--warm-ivory);color:#463a35}
 .closing-mark{color:#d0b98d}
 footer{background:#e9e5d8;color:#6d6857}
 @media(max-width:800px){.events-grid{grid-template-columns:1fr;gap:26px}.event-card{max-width:480px;width:100%;margin:0 auto}}
+
+/* Traditional Tamil-inspired lotus, peacock and swan details */
+.hero{position:relative;isolation:isolate;overflow:hidden}
+.heritage-motifs{position:absolute;inset:0;pointer-events:none;z-index:0;color:#85865f}
+.heritage-motifs svg{position:absolute;filter:drop-shadow(0 5px 8px #57472a16);opacity:.56}
+.motif-peacock{width:clamp(76px,12vw,145px);height:auto;right:7%;top:13%;transform-origin:50% 90%;animation:featherSway 7s ease-in-out infinite}
+.motif-swan{width:clamp(105px,18vw,205px);height:auto;left:4%;bottom:13%;opacity:.48!important;animation:swanGlide 9s ease-in-out infinite}
+.motif-lotus{width:clamp(90px,14vw,155px);height:auto;right:13%;bottom:9%;animation:lotusBreath 5s ease-in-out infinite}
+.hero-content{position:relative;z-index:1}
+@keyframes featherSway{0%,100%{rotate:-3deg;translate:0 0}50%{rotate:4deg;translate:0 -9px}}
+@keyframes swanGlide{0%,100%{translate:0 0}50%{translate:12px -5px}}
+@keyframes lotusBreath{0%,100%{transform:scale(.96);opacity:.45}50%{transform:scale(1.05);opacity:.75}}
+.event-card{position:relative;overflow:hidden}
+.event-card::before{content:"";position:absolute;inset:9px;border:1px solid #b49a6855;pointer-events:none}
+.event-card::after{content:"";position:absolute;top:-70%;left:-45%;width:35%;height:240%;background:linear-gradient(90deg,transparent,#ffffff55,transparent);transform:rotate(22deg);animation:cardGleam 9s ease-in-out infinite;pointer-events:none}
+.event-card>*{position:relative;z-index:1}
+@keyframes cardGleam{0%,65%,100%{left:-55%}82%{left:130%}}
+.event-symbol{font-size:30px;animation:lotusBreath 4.5s ease-in-out infinite}
+.section-kicker{letter-spacing:2.8px}
+.section-heading h2,.intro h2{text-wrap:balance}
+.story-card,.travel-card{box-shadow:0 10px 30px #493a2510}
+.story-card:hover,.travel-card:hover{transform:translateY(-7px) scale(1.01)}
+.gallery-placeholder{position:relative;overflow:hidden}
+.gallery-placeholder::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,#ffffff55 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s ease}
+.gallery-placeholder:hover::after{transform:translateX(120%)}
+.ornament{color:var(--olive);animation:lotusBreath 5s ease-in-out infinite}
+@media(max-width:800px){.motif-peacock{right:1%;top:8%;width:75px;opacity:.34!important}.motif-swan{left:-3%;bottom:8%;width:115px;opacity:.3!important}.motif-lotus{right:4%;bottom:4%;width:88px;opacity:.35!important}}
+@media(prefers-reduced-motion:reduce){.motif-peacock,.motif-swan,.motif-lotus,.event-card::after{animation:none!important}.story-card:hover,.travel-card:hover{transform:none}}
