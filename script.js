@@ -35,3 +35,32 @@ document.getElementById("menuToggle").addEventListener("click", () => {
 document.querySelectorAll(".site-header nav a").forEach(a => a.addEventListener("click", () => {
   document.querySelector(".site-header nav").classList.remove("open");
 }));
+
+
+// Live countdown to midnight IST on the wedding date. Ceremony time can be added later.
+const weddingDate = new Date("2027-02-10T00:00:00+05:30").getTime();
+const countdownParts = {days:document.getElementById("countDays"),hours:document.getElementById("countHours"),minutes:document.getElementById("countMinutes"),seconds:document.getElementById("countSeconds")};
+function updateCountdown(){
+ const remaining=Math.max(0,weddingDate-Date.now());
+ countdownParts.days.textContent=String(Math.floor(remaining/86400000)).padStart(3,"0");
+ countdownParts.hours.textContent=String(Math.floor(remaining%86400000/3600000)).padStart(2,"0");
+ countdownParts.minutes.textContent=String(Math.floor(remaining%3600000/60000)).padStart(2,"0");
+ countdownParts.seconds.textContent=String(Math.floor(remaining%60000/1000)).padStart(2,"0");
+ if(remaining===0) document.querySelector(".countdown-title").textContent=language==="ta"?"இனிய திருமண நாள்!":"TODAY IS THE DAY!";
+}
+updateCountdown();setInterval(updateCountdown,1000);
+
+// Fade sections in as visitors scroll.
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window){
+ document.documentElement.classList.add("js-motion");
+ document.querySelectorAll(".section-heading,.intro,.story-card,.event-card,.travel-card,.gallery-placeholder,.closing").forEach((el,i)=>{el.setAttribute("data-reveal","");el.style.transitionDelay=(i%3)*90+"ms";});
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");observer.unobserve(entry.target);}}),{threshold:.12});
+ document.querySelectorAll("[data-reveal]").forEach(el=>observer.observe(el));
+}
+
+// A sparse drift of rose petals; respects the visitor's reduced-motion setting.
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+ const symbols=["✿","❀","·"];
+ function makePetal(){const p=document.createElement("span");p.className="petal";p.textContent=symbols[Math.floor(Math.random()*symbols.length)];p.style.left=Math.random()*100+"vw";p.style.fontSize=(9+Math.random()*10)+"px";p.style.setProperty("--drift",(Math.random()*150-75)+"px");p.style.animationDuration=(9+Math.random()*7)+"s";document.body.appendChild(p);setTimeout(()=>p.remove(),17000);}
+ for(let i=0;i<6;i++)setTimeout(makePetal,i*500);setInterval(makePetal,1900);
+}
