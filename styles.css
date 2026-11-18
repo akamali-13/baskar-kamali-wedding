@@ -207,3 +207,9 @@ footer{background:#e9e5d8;color:#6d6857}
 .timeline-card .button-outline{border-color:#59613d;color:#4d5735}
 .event-type{color:#4e5936}
 @media(max-width:600px){.shared-venue{margin:-10px auto 26px;padding:15px 12px}.shared-venue-name{font-size:22px}}
+
+
+/* Fix contrast for the celebration heading on the burgundy section */
+.celebration .section-heading h2{color:#fff4e4!important}
+.celebration .section-heading .section-kicker{color:#e1c58f!important}
+.celebration .section-heading>p:last-child{color:#f0e4d0!important}
