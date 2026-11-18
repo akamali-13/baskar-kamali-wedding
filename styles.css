@@ -188,3 +188,22 @@ footer{background:#e9e5d8;color:#6d6857}
  .timeline-time{font-size:22px}
  .timeline-card .event-buttons{flex-direction:column;align-items:flex-start}
 }
+
+
+/* Shared venue appears once for the whole celebration timeline */
+.shared-venue{text-align:center;max-width:640px;margin:-18px auto 34px;padding:18px 20px 20px;border-top:1px solid #c5ae7d;border-bottom:1px solid #c5ae7d;color:#f7eddb}
+.shared-venue-name{font:500 25px "Cormorant Garamond",serif;color:#fff4e4;margin:0 0 3px}
+.shared-venue-place{font-size:12px;letter-spacing:1px;color:#e5d7bb;margin:0}
+.shared-venue-link{display:inline-block;margin-top:10px;color:#e3c68f;font-size:11px;text-decoration:none;border-bottom:1px solid #c4a36d;padding-bottom:3px}
+.timeline-card{background:linear-gradient(135deg,#fffdf7,#f3eee2);border-color:#b7a071}
+.timeline-card .event-type{color:#59613d;font-weight:700}
+.timeline-card h3{color:#54212c}
+.timeline-time{color:#76502f;font-weight:600}
+.timeline-note{color:#51453e;font-size:13px;line-height:1.65}
+.timeline-card .event-venue{color:#40332e}
+.timeline-card .event-place{color:#51463e}
+.timeline-link{color:#59613d;border-color:#8d9467}
+.timeline-card .button-gold{background:#59613d;color:#fff}
+.timeline-card .button-outline{border-color:#59613d;color:#4d5735}
+.event-type{color:#4e5936}
+@media(max-width:600px){.shared-venue{margin:-10px auto 26px;padding:15px 12px}.shared-venue-name{font-size:22px}}
