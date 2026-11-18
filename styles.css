@@ -95,3 +95,56 @@ footer{background:#e9e5d8;color:#6d6857}
 .ornament{color:var(--olive);animation:lotusBreath 5s ease-in-out infinite}
 @media(max-width:800px){.motif-peacock{right:1%;top:8%;width:75px;opacity:.34!important}.motif-swan{left:-3%;bottom:8%;width:115px;opacity:.3!important}.motif-lotus{right:4%;bottom:4%;width:88px;opacity:.35!important}}
 @media(prefers-reduced-motion:reduce){.motif-peacock,.motif-swan,.motif-lotus,.event-card::after{animation:none!important}.story-card:hover,.travel-card:hover{transform:none}}
+
+
+/* Botanical royal composition: richer garden atmosphere and visible heritage motifs */
+:root{--ink-burgundy:#54212c;--olive:#7e8056;--olive-deep:#5f6845;--ivory:#f8f2e6;--rose:#b96f72;--gold:#b58b4e}
+.hero{
+ min-height:790px;
+ background:
+   radial-gradient(ellipse at 50% 42%,rgba(255,251,239,.97) 0%,rgba(250,241,222,.92) 35%,rgba(229,222,194,.78) 72%,rgba(126,128,86,.22) 100%),
+   linear-gradient(120deg,#d8d6bd,#f8f0e2 45%,#e6d9c5);
+ color:var(--ink-burgundy);
+}
+.hero:before,.hero:after{width:470px;height:470px;border-color:#a78b5b44}
+.hero-pattern{inset:14px;border:1px solid #a98b5b99;box-shadow:inset 0 0 0 5px #fff8e833,inset 0 0 55px #9b78401c}
+.hero-content{max-width:780px;padding:28px 24px 18px}
+.hero h1{font-size:clamp(58px,9vw,104px);text-shadow:0 2px 0 #fff8}
+.lotus{font-size:46px;color:#9a7744}
+.hero-subtitle{color:#60403a}
+.date-line{font-size:clamp(28px,4vw,38px);letter-spacing:4px;color:#7b2936;margin-top:22px}
+.countdown{max-width:560px;border:1px solid #b58b4e88;border-radius:28px;background:#fff9edb8;box-shadow:0 14px 40px #50351d14;padding:20px 24px}
+.countdown-title{color:#786b45}
+.countdown-unit strong{color:#742b36}
+.countdown-unit span{color:#756a4c}
+.venue-line{color:#665c42}
+.text-link{color:#6d613f;border-color:#a88a55}
+.heritage-motifs svg{filter:drop-shadow(0 10px 13px #4b35252a);opacity:.88}
+.motif-peacock{width:clamp(145px,22vw,260px);left:1.5%;right:auto;top:auto;bottom:5%;color:#42665a;transform-origin:50% 90%;animation:featherSway 6s ease-in-out infinite}
+.motif-swan{width:clamp(180px,27vw,310px);left:auto;right:1%;bottom:5%;color:#8b8067;opacity:.9!important;animation:swanGlide 8s ease-in-out infinite}
+.motif-lotus{width:clamp(130px,18vw,205px);left:26%;right:auto;bottom:2%;color:#a86b70;animation:lotusBreath 4.5s ease-in-out infinite}
+.celebration{background:linear-gradient(145deg,#4c202b,#642c36 55%,#4a202b);position:relative;overflow:hidden}
+.celebration:before,.celebration:after{content:"✿";position:absolute;color:#d5b67e22;font-size:180px;pointer-events:none}
+.celebration:before{top:20px;left:3%}.celebration:after{right:3%;bottom:10px}
+.events-grid{gap:30px}
+.event-card{border-radius:46px 46px 24px 24px;box-shadow:0 18px 50px #210b102e;padding:52px 30px}
+.event-card:before{inset:12px;border-radius:38px 38px 18px 18px;border-color:#b99a6680}
+.event-card h3{font-size:clamp(30px,4vw,42px)}
+.event-date{font-size:24px;color:#5b453b}
+.event-symbol{color:#a47748}
+.travel-card{border-radius:18px 18px 55px 18px;background:linear-gradient(145deg,#fffdf7,#eeeadb);box-shadow:0 14px 32px #4a392014}
+.travel-card:before{content:"";position:absolute;inset:8px;border:1px solid #c9b98e66;border-radius:13px 13px 48px 13px;pointer-events:none}
+.petal{color:#b96f72;text-shadow:0 2px 8px #7c303044}
+@keyframes featherSway{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(3deg) translateY(-10px)}}
+@keyframes swanGlide{0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(-18px) translateY(-7px)}}
+@keyframes lotusBreath{0%,100%{transform:scale(.96);filter:drop-shadow(0 0 0 #d18a8a00)}50%{transform:scale(1.06);filter:drop-shadow(0 4px 12px #d18a8a66)}}
+@media(max-width:800px){
+ .hero{min-height:760px;padding:65px 14px 160px}
+ .hero-content{padding:18px 12px}
+ .motif-peacock{width:130px;left:-8px;bottom:2%;opacity:.68!important}
+ .motif-swan{width:165px;right:-12px;bottom:2%;opacity:.7!important}
+ .motif-lotus{width:100px;left:38%;bottom:0;opacity:.7!important}
+ .countdown{max-width:360px;padding:15px 12px}
+ .event-card{padding:42px 20px}
+}
+@media(prefers-reduced-motion:reduce){.motif-peacock,.motif-swan,.motif-lotus{animation:none!important}}
