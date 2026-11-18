@@ -24,3 +24,46 @@
 @media(max-width:800px){.countdown{max-width:340px;padding:14px 10px}.countdown-title{font-size:8px;letter-spacing:2px}.countdown-unit span{font-size:7px;letter-spacing:1px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.js-motion [data-reveal]{opacity:1;transform:none}.petal{display:none}}
 
+
+/* Editorial invitation palette inspired by olive, burgundy, ivory and garden florals */
+:root{--ink-burgundy:#4b202b;--olive:#85865f;--olive-dark:#656847;--warm-ivory:#f8f5ee;--dusty-rose:#b98587;--antique-gold:#b49a68}
+body{background:var(--warm-ivory);color:#463a35}
+.site-header{background:#fbf8f1}
+.brand span,.section-kicker,.story-date,.travel-number,.event-symbol,.closing-mark{color:var(--olive)}
+.hero{background:linear-gradient(135deg,#e8e5d6 0%,#f8f4eb 48%,#e5e0d2 100%);color:var(--ink-burgundy)}
+.hero-pattern{border-color:#85865f66}
+.hero h1,.hero-subtitle,.date-line{color:var(--ink-burgundy)}
+.hero h1 i{color:var(--olive)}
+.hero .eyebrow,.venue-line{color:#766e56}
+.hero-rule span{background:var(--olive)}
+.hero-rule b{color:var(--olive)}
+.countdown{border-color:#85865f66;background:#ffffff55}
+.countdown-title,.countdown-unit span{color:var(--olive-dark)}
+.countdown-unit strong{color:var(--ink-burgundy)}
+.text-link{color:var(--olive-dark);border-color:var(--olive)}
+.section-wrap{background:transparent}
+.intro h2,.section-heading h2,.story-card h3{color:var(--ink-burgundy)}
+.story-card{background:#fbf8f1;border-color:#e4ddce}
+.photo-placeholder{background:linear-gradient(145deg,#d9d7c1,#a9a989 52%,#e8dfd0);color:#4e5039}
+.celebration{background:var(--ink-burgundy)}
+.events-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:1000px;margin:auto;align-items:stretch}
+.event-card{background:#faf7ef;border:1px solid #c4b18a;outline-color:#c4b18a55;display:flex;flex-direction:column;align-items:center}
+.event-reception{background:#f1eee3}
+.event-reception .event-symbol,.event-reception .event-type{color:var(--olive-dark)}
+.event-wedding{background:#fbf7ef}
+.event-type{color:var(--olive-dark)}
+.event-card h3{color:var(--ink-burgundy)}
+.event-time{color:var(--olive-dark);font-weight:700}
+.event-divider{color:var(--dusty-rose)}
+.button-gold{background:var(--olive-dark);color:#fff}
+.button-outline{border-color:var(--olive-dark);color:var(--olive-dark)}
+.travel-card{background:#fbf8f1;border-color:#e2dacb}
+.travel-number{color:var(--olive)}
+.travel-card h3{color:var(--ink-burgundy)}
+.travel-card a{color:var(--olive-dark);border-color:var(--olive)}
+.gallery-section{background:#eeeade}
+.gallery-placeholder{background:linear-gradient(135deg,#d8d5bf,#aaa982 55%,#e8d9d0);color:#4e5039}
+.closing{background:var(--ink-burgundy)}
+.closing-mark{color:#d0b98d}
+footer{background:#e9e5d8;color:#6d6857}
+@media(max-width:800px){.events-grid{grid-template-columns:1fr;gap:26px}.event-card{max-width:480px;width:100%;margin:0 auto}}
