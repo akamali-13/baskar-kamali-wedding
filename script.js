@@ -65,15 +65,3 @@ if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
  for(let i=0;i<6;i++)setTimeout(makePetal,i*500);setInterval(makePetal,1900);
 }
 
-
-// Open the invitation card and reveal the wedding website.
-const invitationScreen=document.getElementById("invitationScreen");
-const openInvitationButton=document.getElementById("openInvitation");
-if(invitationScreen && openInvitationButton){
- document.body.classList.add("invitation-locked");
- openInvitationButton.addEventListener("click",()=>{
-   invitationScreen.classList.add("is-opening");
-   document.body.classList.remove("invitation-locked");
-   window.setTimeout(()=>invitationScreen.remove(),900);
- });
-}
