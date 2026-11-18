@@ -38,7 +38,7 @@ document.querySelectorAll(".site-header nav a").forEach(a => a.addEventListener(
 
 
 // Live countdown to midnight IST on the wedding date. Ceremony time can be added later.
-const weddingDate = new Date("2027-02-10T00:00:00+05:30").getTime();
+const weddingDate = new Date("2027-02-10T06:30:00+05:30").getTime();
 const countdownParts = {days:document.getElementById("countDays"),hours:document.getElementById("countHours"),minutes:document.getElementById("countMinutes"),seconds:document.getElementById("countSeconds")};
 function updateCountdown(){
  const remaining=Math.max(0,weddingDate-Date.now());
@@ -63,4 +63,17 @@ if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
  const symbols=["✿","❀","·"];
  function makePetal(){const p=document.createElement("span");p.className="petal";p.textContent=symbols[Math.floor(Math.random()*symbols.length)];p.style.left=Math.random()*100+"vw";p.style.fontSize=(9+Math.random()*10)+"px";p.style.setProperty("--drift",(Math.random()*150-75)+"px");p.style.animationDuration=(9+Math.random()*7)+"s";document.body.appendChild(p);setTimeout(()=>p.remove(),17000);}
  for(let i=0;i<6;i++)setTimeout(makePetal,i*500);setInterval(makePetal,1900);
+}
+
+
+// Open the invitation card and reveal the wedding website.
+const invitationScreen=document.getElementById("invitationScreen");
+const openInvitationButton=document.getElementById("openInvitation");
+if(invitationScreen && openInvitationButton){
+ document.body.classList.add("invitation-locked");
+ openInvitationButton.addEventListener("click",()=>{
+   invitationScreen.classList.add("is-opening");
+   document.body.classList.remove("invitation-locked");
+   window.setTimeout(()=>invitationScreen.remove(),900);
+ });
 }
